@@ -1,0 +1,16 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    name: prometheus
+  name: hello-observability
+spec:
+  endpoints:
+    - interval: 5s
+      path: /metrics
+      targetPort: 8080
+  namespaceSelector:
+    any: true
+  selector:
+    matchLabels:
+      app: hello-observability

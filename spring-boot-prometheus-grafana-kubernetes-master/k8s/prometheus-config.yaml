@@ -1,0 +1,76 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  creationTimestamp: "2022-05-11T19:39:55Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: prometheus
+    app.kubernetes.io/instance: k8s
+    app.kubernetes.io/name: prometheus
+    app.kubernetes.io/part-of: kube-prometheus
+    app.kubernetes.io/version: 2.35.0
+  name: k8s
+  namespace: monitoring
+  resourceVersion: "36672"
+  uid: 2c39e41a-8a49-4123-9297-006a7093cd7a
+spec:
+  alerting:
+    alertmanagers:
+    - apiVersion: v2
+      name: alertmanager-main
+      namespace: monitoring
+      port: web
+  enableFeatures: []
+  evaluationInterval: 30s
+  externalLabels: {}
+  image: quay.io/prometheus/prometheus:v2.35.0
+  nodeSelector:
+    kubernetes.io/os: linux
+  podMetadata:
+    labels:
+      app.kubernetes.io/component: prometheus
+      app.kubernetes.io/instance: k8s
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/part-of: kube-prometheus
+      app.kubernetes.io/version: 2.35.0
+  podMonitorNamespaceSelector: {}
+  podMonitorSelector: {}
+  additionalScrapeConfigs:
+    name: additional-scrape-configs
+    key: prometheus.yml
+  probeNamespaceSelector: {}
+  probeSelector: {}
+  replicas: 2
+  resources:
+    requests:
+      memory: 400Mi
+  ruleNamespaceSelector: {}
+  ruleSelector: {}
+  scrapeInterval: 30s
+  securityContext:
+    fsGroup: 2000
+    runAsNonRoot: true
+    runAsUser: 1000
+  serviceAccountName: prometheus-k8s
+  serviceMonitorNamespaceSelector: {}
+  serviceMonitorSelector: {}
+  version: 2.35.0
+status:
+  availableReplicas: 2
+  conditions:
+  - lastTransitionTime: "2022-05-12T14:20:06Z"
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2022-05-11T19:40:33Z"
+    status: "True"
+    type: Reconciled
+  paused: false
+  replicas: 2
+  shardStatuses:
+  - availableReplicas: 2
+    replicas: 2
+    shardID: "0"
+    unavailableReplicas: 0
+    updatedReplicas: 2
+  unavailableReplicas: 0
+  updatedReplicas: 2

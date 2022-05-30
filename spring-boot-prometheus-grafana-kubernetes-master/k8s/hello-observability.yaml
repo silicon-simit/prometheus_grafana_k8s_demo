@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-observability
+spec:
+  selector:
+    matchLabels:
+      app: hello-observability
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hello-observability
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        prometheus.io/path: "/metrics"
+    spec:
+      containers:
+        - name: spring-boot-prometheus
+          image: grenader/hello-observability:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              memory: 294Mi

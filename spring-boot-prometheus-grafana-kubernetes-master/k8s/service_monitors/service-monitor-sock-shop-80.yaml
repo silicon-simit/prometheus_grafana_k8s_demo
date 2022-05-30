@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: prometheus-sock-shop-8079
+  labels:
+    name: prometheus
+spec:
+  selector:
+    matchLabels:
+      name: front-end
+  namespaceSelector: 
+    matchNames: ["sock-shop"]
+  endpoints:
+    - targetPort: 8079

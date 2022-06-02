@@ -24,13 +24,7 @@ A big upside of the project is it can be deployed on-prem by organizations which
 
 ## How to install Prometheus and Grafana on K8s?
 
-- Clone the demo project repository
-
-```
-git clone https://github.com/prometheus-operator/kube-prometheus.git
-```
-
-- Switch to the root project directory
+- Switch to the kube-prometheus project directory
 
 ```
 cd kube-prometheus

@@ -154,5 +154,3 @@ http://node_ip:31237
 ``` 
 kubectl delete --ignore-not-found=true -f manifests/ -f manifests/setup
 ```
-
->>>>>>> 140e107 (Updated structure and intructions)

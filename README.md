@@ -138,7 +138,7 @@ Access URLs
 
 - TODO
 
-## How to destoy or tear down the deployment?
+## How to destoy or tear down the Prometheus and Grafana deployment on Kubernetes?
 
 ``` 
 kubectl delete --ignore-not-found=true -f manifests/ -f manifests/setup

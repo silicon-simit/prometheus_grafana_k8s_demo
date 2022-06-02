@@ -128,13 +128,13 @@ kubectl -n monitoring get svc | grep NodePort
 
 Access URLs
   
-- Grafana: http://node_ip:31123
+- Grafana: http://[node_ip]:31123
 
 
-- Prometheus: http://node_ip:31123
+- Prometheus: http://[node_ip]:31123
 
 
-- Alert Manager: http://node_ip:31237
+- Alert Manager: http://[node_ip]:31237
 
 ## Method 3: Using Load Balancers
 

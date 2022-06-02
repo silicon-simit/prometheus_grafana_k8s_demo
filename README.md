@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-# prometheus_grafana_k8s_demo
-
-## Introduction: What is the purpose and value of Prometheus and Grafana?
-
-## How to install Prometheus and Grafana on K8s?
-
-## How to deploy some applications to K8s?
-
-## Result: What is the value of monitoring applicatons?
-=======
 # Prometheus and Grafana on Kubernetes Demo
 
 This demo shows you how to deploy Prometheus and Grafana into your Minikube/K8s cluster. Prometheus will help us monitor our Kubernetes Cluster and other resources running on it. Grafana will help us visualize metrics recorded by Prometheus and display them in fancy dashboards.

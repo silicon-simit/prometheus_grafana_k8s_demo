@@ -133,6 +133,11 @@ Access URLs
 ## Method 3: Using Load Balancers
 
 - TODO
+
+## How to deploy a sample application?
+
+- TODO
+
 ## How to destoy or tear down the deployment?
 
 ``` 
